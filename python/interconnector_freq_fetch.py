@@ -6,7 +6,7 @@ import pandas as pd
 from datetime import datetime as dt
 from datetime import timedelta
 
-API = 'mlplmmd3biqahbq'
+API = 'your_api'
 
 def main ():
     start_date = (dt.now()-timedelta(days=1)).strftime("%Y-%m-%d %H:%M:%S")
