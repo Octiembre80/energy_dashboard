@@ -5,7 +5,7 @@ import pandas as pd
 from datetime import datetime as dt
 from datetime import timedelta
 
-API = 'mlplmmd3biqahbq'
+API = 'your_api'
 
 def headers_list(report):
     return {
