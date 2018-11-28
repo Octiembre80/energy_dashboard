@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <meta name="author" content="">
+
+      <title>Dashboard</title>
+
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+      <link href="css/toolkit.css" rel="stylesheet">
+      <link href="css/styles.css" rel="stylesheet">
+
+
+
+      <style>
+        /* additional css */
+
+      </style>
+      <!-- serve from own server -->
+      <!-- <script src="node_modules/highcharts/js/highcharts.js"></script> -->
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+      <script src="https://code.highcharts.com/modules/data.js"></script>
+      <script src="https://code.highcharts.com/stock/highstock.js"></script>
+      <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+      <script src="https://unpkg.com/moment" /></script>
+
+    </head>
+
+  <body>
+    <div class = "page_container">
+
+      <!---
+      Left column
+      -->
+      <div class="col-lg-4">
+        <div class = 'title_container'>
+          <h5> Generation </h5>
+        </div>
+        <div id = "current_gen_container">
+          <button id = "live-button" type="button" onclick="import()"> Live </button>
+          <div class = "clear">
+          </div>
+          <div id = "gen_icon_container">
+            <div>
+              <img class ="icon" src="/images/nuclear1.svg" />
+              <p class ="caption" id='"Nuclear"'></p>
+            </div>
+            <div>
+              <img class ="icon" src="/images/gas1.svg" >
+              <span class ="caption" id='"Fossil Gas"'></span>
+            </div>
+            <div>
+              <img class ="icon" src="/images/coal1.svg" >
+              <span class ="caption" id='"Fossil Hard coal"'></span>
+            </div>
+            <div>
+              <img class ="icon" src="/images/wind2.svg" >
+              <span class ="caption" id='"Wind Offshore"'></span>
+            </div>
+            <div>
+              <img class ="icon" src="/images/wind1.svg" >
+              <span class ="caption" id='"Wind Onshore"'></span>
+            </div>
+            <div>
+              <img class ="icon" src="/images/solar1.svg" >
+              <span class ="caption" id='"Solar"'></span>
+            </div>
+            <div>
+              <img class ="icon" src="/images/hydro1.svg" >
+              <span class ="caption" id='"Hydro Pumped Storage"'></span>
+            </div>
+            <div>
+              <img class ="icon" src="/images/biomass1.svg" >
+              <span class ="caption" id='"Biomass"'></span>
+            </div>
+
+          </div>
+        </div>
+        <div class = "clear">
+        </div>
+        <div id = "gen_forecast_container">
+          <div id = "gen_forecast_graph_container">
+          </div>
+        </div>
+
+        <div id = "interconnector_container">
+          <div id = "interconnector_graph_container">
+          </div>
+        </div>
+
+      </div>
+
+      <!---
+      Centre column
+      -->
+      <div class="col-lg-4">
+        <div class = 'title_container'>
+          <h5> Demand </h5>
+        </div>
+        <div class = "clear">
+        </div>
+
+        <div id = "current_dem_container">
+          <div id = "current_demand">
+            <p class = "demand_title"> Current Demand </p>
+            <p class = "demand_title" id = "demand"></p>
+          </div>
+          <div id = "frequency_container"></div>
+        </div>
+
+        <div id = "dem_forecast_container">
+          <div id = "dem_forecast_graph_container">
+          </div>
+        </div>
+
+        <div id = "weather_container">
+          <div id = "weather_graph_container">
+          </div>
+          <!-- <img src = "http://openweathermap.org/img/w/10d.png"> -->
+        </div>
+
+      </div>
+
+      <!---
+      Right column
+      -->
+      <div class="col-lg-4">
+        <div class = 'title_container'>
+          <h5> Market </h5>
+        </div>
+        <div class = "clear">
+        </div>
+        <div id = "spot_market_container">
+          <div id = "spot_market_graph_container">
+          </div>
+        </div>
+
+        <div id = "news_container">
+          <p1> Newsfeed </p1>
+          <div id = "news_feed_container">
+
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Data input script -->
+    <script src="js/demand_scripts.js"></script>
+
+    <!-- // Generation forecast chart -->
+    <script src="js/forecast_gen_chart.js"></script>
+
+    <!-- // Generation forecast chart -->
+    <script src="js/interconnector_chart.js"></script>
+
+    <!-- // Frequency chart -->
+    <script src="js/frequency_chart.js"></script>
+
+    <!-- // Demand forecast chart -->
+    <script src="js/forecast_dem_chart.js"></script>
+
+    <!-- // Demand forecast chart -->
+    <script src="js/weather_chart.js"></script>
+
+    <!-- // Spot market chart -->
+    <script src="js/spot_chart.js"></script>
+
+    <!-- // Energy futures chart -->
+    <script src="js/news.js"></script>
+
+    <!-- // Highcharts theme -->
+    <script src="js/custom.js"></script>
+
+
+    <!-- need to run B1620_fetch.py then import_data.B1620json.py -->
+    <!-- <script>
+      $('#live-button')click(function(){
+        $.ajax({
+          type: "GET",
+          url: "/python/main_fetch.main()",
+          dataType: script
+          });
+        });
+    </script> -->
+
+
+
+
+
+  </body>
+</html>

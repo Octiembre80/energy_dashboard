@@ -1,0 +1,1 @@
+{"\"Other\"": [130.0], "\"Solar\"": [15.0], "\"Wind Offshore\"": [894.393], "\"Hydro Pumped Storage\"": [378.0], "\"Wind Onshore\"": [1490.806], "\"Fossil Gas\"": [13954.0], "\"Fossil Hard coal\"": [1060.0], "\"Biomass\"": [2383.0], "\"Nuclear\"": [7962.0], "\"Fossil Oil\"": [0.0], "\"Hydro Run-of-river and poundage\"": [181.0]}
