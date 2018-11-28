@@ -23,7 +23,7 @@ from datetime import timedelta
 
 # -------------------------------------------------------------------
 data  = []
-API = 'mlplmmd3biqahbq'
+API = 'your_api'
 
 '''
 Produces a list of dates from a start date until present, default to 2 days ago

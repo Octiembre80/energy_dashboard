@@ -7,7 +7,7 @@ import pandas as pd
 def main ():
     http_obj = httplib2.Http()
     resp, content = http_obj.request(
-        uri="http://webhose.io/filterWebContent?token=244460af-044a-4c47-84db-2a6ec814f532&format=json&sort=crawled&q=energy",
+        uri="http://webhose.io/filterWebContent?token=api_token&format=json&sort=crawled&q=energy",
         method='GET',
         headers={'Content-Type':'application/json: charset=UTF-8'}
     )
@@ -31,7 +31,7 @@ def main ():
 
         data.update({i:[title, url]})
 
-    with open('/Users/rhysshea/Desktop/Energy dashboard/data/newsfeed.json', 'w') as outfile:
+    with open('/User/Path/Energy dashboard/data/newsfeed.json', 'w') as outfile:
         json.dump(data, outfile)
 
 

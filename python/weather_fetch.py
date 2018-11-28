@@ -14,7 +14,7 @@ import json
 
 # -------------------------------------------------------------------
 data  = []
-API = '11a24196db69c2ce25f348626bf8cd69'
+API = 'your_api'
 
 '''
 Creates the url based on report code, date and periods
